@@ -1,14 +1,15 @@
 //
-//  MIBadgeButtonTests.swift
-//  MIBadgeButtonTests
+//  MIBadgeButton_SwiftTests.swift
+//  MIBadgeButton-SwiftTests
 //
-//  Created by Yosemite on 8/27/14.
-//  Copyright (c) 2014 Youxel Technology. All rights reserved.
+//  Created by Gianni Carlo on 4/9/18.
+//  Copyright © 2018 Criptext Inc. All rights reserved.
 //
 
 import XCTest
+@testable import MIBadgeButton_Swift
 
-class MIBadgeButtonTests: XCTestCase {
+class MIBadgeButton_SwiftTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -22,12 +23,12 @@ class MIBadgeButtonTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure() {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

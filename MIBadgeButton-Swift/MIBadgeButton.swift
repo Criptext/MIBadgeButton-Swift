@@ -31,14 +31,14 @@ open class MIBadgeButton: UIButton {
         }
     }
     
-//    @objc
-//    open var badgeEdgeInsets: UIEdgeInsets = .zero
+    //    @objc
+    //    open var badgeEdgeInsets: UIEdgeInsets = .zero
     /**
      Factor that can change corner radius of badge
      
      This value will be calculate like:
      (Badge Label Height) / (this value)
-    **/
+     **/
     @IBInspectable
     open var cornerRadiusFactor : CGFloat = 2{
         
@@ -50,7 +50,7 @@ open class MIBadgeButton: UIButton {
     /**
      Vertical margin in badge
      This is the space between text and badge's vertical edge
-    **/
+     **/
     fileprivate var innerVerticalMargin : CGFloat = 5.0{
         
         didSet{
@@ -127,11 +127,11 @@ open class MIBadgeButton: UIButton {
     /**
      Can be adjust from Interface Builder
      EdgeInsetLeft
-    **/
+     **/
     @IBInspectable
     open var edgeInsetLeft : CGFloat{
         set{
-
+            
             if let edgeInset = badgeEdgeInsets{
                 
                 self.badgeEdgeInsets = UIEdgeInsets(top: edgeInset.top, left: newValue, bottom: edgeInset.bottom, right: edgeInset.right)
@@ -297,7 +297,7 @@ open class MIBadgeButton: UIButton {
      3 = BottomRight
      
      4 = Center
-    **/
+     **/
     @IBInspectable
     open var anchor : Int{
         set{
@@ -408,37 +408,37 @@ open class MIBadgeButton: UIButton {
     }
     
     /*
-    fileprivate func setupBadgeViewWithString(badgeText: String?) {
-        badgeLabel.clipsToBounds = true
-        badgeLabel.text = badgeText
-        badgeLabel.font = UIFont.systemFont(ofSize: 12)
-        badgeLabel.textAlignment = .center
-        badgeLabel.sizeToFit()
-        let badgeSize = badgeLabel.frame.size
-        
-        let height = max(20, Double(badgeSize.height) + 5.0)
-        let width = max(height, Double(badgeSize.width) + 10.0)
-        
-        var vertical: Double?, horizontal: Double?
-        let badgeInset = self.badgeEdgeInsets
-        vertical = Double(badgeInset.top) - Double(badgeInset.bottom)
-        horizontal = Double(badgeInset.left) - Double(badgeInset.right)
-        
-        let x = (Double(bounds.size.width) - 10 + horizontal!)
-        let y = -(Double(badgeSize.height) / 2) - 10 + vertical!
-        badgeLabel.frame = CGRect(x: x, y: y, width: width, height: height)
-        
-        setupBadgeStyle()
-        addSubview(badgeLabel)
-        
-        if let text = badgeText {
-            badgeLabel.isHidden = text != "" ? false : true
-        } else {
-            badgeLabel.isHidden = true
-        }
-        
-    }
-    */
+     fileprivate func setupBadgeViewWithString(badgeText: String?) {
+     badgeLabel.clipsToBounds = true
+     badgeLabel.text = badgeText
+     badgeLabel.font = UIFont.systemFont(ofSize: 12)
+     badgeLabel.textAlignment = .center
+     badgeLabel.sizeToFit()
+     let badgeSize = badgeLabel.frame.size
+     
+     let height = max(20, Double(badgeSize.height) + 5.0)
+     let width = max(height, Double(badgeSize.width) + 10.0)
+     
+     var vertical: Double?, horizontal: Double?
+     let badgeInset = self.badgeEdgeInsets
+     vertical = Double(badgeInset.top) - Double(badgeInset.bottom)
+     horizontal = Double(badgeInset.left) - Double(badgeInset.right)
+     
+     let x = (Double(bounds.size.width) - 10 + horizontal!)
+     let y = -(Double(badgeSize.height) / 2) - 10 + vertical!
+     badgeLabel.frame = CGRect(x: x, y: y, width: width, height: height)
+     
+     setupBadgeStyle()
+     addSubview(badgeLabel)
+     
+     if let text = badgeText {
+     badgeLabel.isHidden = text != "" ? false : true
+     } else {
+     badgeLabel.isHidden = true
+     }
+     
+     }
+     */
     fileprivate func setupBadgeViewWithString(badgeText: String?){
         badgeLabel.clipsToBounds = true
         badgeLabel.text = badgeText
@@ -482,13 +482,13 @@ open class MIBadgeButton: UIButton {
         } else {
             badgeLabel.isHidden = true
         }
-
+        
     }
     
     /**
      Calculate badge's X Y position.
      Offset are taking into count
-    **/
+     **/
     fileprivate func calculateXYForBadge(x : inout CGFloat, y : inout CGFloat, badgeSize : CGSize){
         
         switch self.badgeAnchor {
